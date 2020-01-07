@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import "assets/theming";
+
+app-root{
+  display: block;
+}
+html,body,app-root,.site{
+  height: 100%;width: 100%;margin: 0;
+}
+.site{display: flex;flex-direction: column}
+main{flex: 1}
+.mat-drawer-container{height: 100%}
+
+
+.fill-remaing-space{flex: 1 1 auto}
+.full-width{width: 100%}

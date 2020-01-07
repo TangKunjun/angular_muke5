@@ -1,0 +1,34 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+//自定义默认主题 start
+$my-app-primary: mat-palette($mat-indigo);
+$my-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-app-warn: mat-palette($mat-red);
+
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+//自定义默认主题end
+
+
+//黑夜主题start
+
+$my-dark-primary: mat-palette($mat-blue-grey);
+$my-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$my-dark-warn: mat-palette($mat-deep-orange);
+
+
+$my-dark-theme: mat-light-theme($my-dark-primary, $my-dark-accent, $my-dark-warn);
+
+.myapp-dark-theme {
+  @include angular-material-theme($my-dark-theme);   //直接用会覆盖默认主题 所以放在一个class里面
+}
+//以上为自定义默认主题
+
+//黑夜主题end
+
+

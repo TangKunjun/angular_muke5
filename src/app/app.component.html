@@ -1,0 +1,22 @@
+<mat-drawer-container  [class.myapp-dark-theme]="darkTheme">
+  <mat-drawer #sidebar mode="over" >
+      <app-sidebar (navClick)="sidebar.toggle()"></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="site">
+      <header>
+        <app-header (toggle)="sidebar.toggle()" (toggleDarkTheme)="switchTheme($event)"></app-header>
+      </header>
+
+      <main>
+        <router-outlet></router-outlet>
+
+      </main>
+
+      <footer>
+        <app-footer></app-footer>
+      </footer>
+      </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
